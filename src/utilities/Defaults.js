@@ -1,9 +1,11 @@
 
 const themeColors = {
-    primary: '#2069e0',
-    secondary: '#f4d47c',
+    primary: '#5664D2',
+    secondary: '#ffc000',
     secondary2: '#082c6c',
+    danger: '#a60000',
     text: '#878683',
+    whiteText: '#eeeeee',
     heading: '#444444',
     muted: '#bebebe',
 };
@@ -68,26 +70,19 @@ const DStatus = {
 
 
 const defaultFABActions = [
+
     {
-        icon: 'plus',
-        onPress: () => console.log('Pressed add'),
-    },
-    {
-        icon: 'star',
-        label: 'Star',
-        onPress: () => console.log('Pressed star'),
-    },
-    {
-        icon: 'email',
-        label: 'Email',
-        onPress: () => console.log('Pressed email'),
-    },
-    {
-        icon: 'bell',
-        label: 'Remind',
-        onPress: () => console.log('Pressed notifications'),
+        icon: 'minus',
+        label: 'Expense',
+        onPress: () => console.warn('Pressed email'),
         small: false,
     },
+    {
+        icon: 'plus',
+        label: 'Sell',
+        onPress: () => console.warn('Pressed star'),
+        small: false,
+    }
 ];
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, TouchableOpacity, StyleSheet} from 'react-native';
-import {Button, Headline, Text} from 'react-native-paper';
+import {Button, Headline, Subheading, Text} from 'react-native-paper';
 import FABButton from '../components/FABButton';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -11,11 +11,10 @@ export default class Blank extends React.Component {
     }
 
     render() {
-
         // navigation.openDrawer();
         return (
             <View style={styles.container}>
-
+                <Subheading>{(this.props.route.name).toUpperCase()}</Subheading>
                 <FABButton/>
             </View>
 

@@ -11,10 +11,7 @@ export const AuthProvider = ({children}) => {
         const subscriber = true;
         return subscriber;
     }, []);
-    useEffect(() => {
 
-
-    })
 
 
     return <AuthContext.Provider value={{currentUser, setCurrentUser}}>{children}</AuthContext.Provider>

@@ -18,6 +18,8 @@ target 'stawimobile' do
 
   pod 'RNSecureStorage', :path => '../node_modules/react-native-secure-storage'
 
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
   target 'stawimobileTests' do
     inherit! :complete
     # Pods for testing

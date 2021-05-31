@@ -1,33 +1,29 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
+
 import React from 'react';
-import Route from './Route';
-import {StatusBar} from 'react-native'
+import {
+    StatusBar,
+} from 'react-native';
 import {AuthProvider} from './AuthContext';
-import axios from 'axios';
+import Route from './Route';
+import {themeColors} from './utilities/Defaults';
 
 
-export default class App extends React.Component {
-    componentDidMount() {
-        const BASEURL = 'http://192.168.100.35/api/app/';
-        axios.defaults.baseURL = BASEURL;
-        axios.defaults.headers.get['Content-Type'] = 'application/json';
-        axios.defaults.headers.post['Content-Type'] = 'application/json';
-        // axios.defaults.headers.common = cookie.load('AuthToken');
-    }
-
-    render() {
-        return <AuthProvider>
+export default function App() {
+    return (<>
+        <AuthProvider>
             <StatusBar
                 animated={true}
-                backgroundColor="#ffffff"
+                backgroundColor={themeColors.primary}
                 statusBarStyle={'light-content'}
-                barStyle={'dark-content'}
-            />
-            <Route/>
-
-        </AuthProvider>;
-    }
-
+                barStyle={'light-content'}/>
+            <Route/></AuthProvider></>);
 
 }
-
 
